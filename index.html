@@ -1,11 +1,843 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyrgyzstan Tourism — горы, озёра и кочевая культура Кыргызстана</title>
+  <meta name="description" content="Туристический портал о Кыргызстане: Иссык-Куль, Ала-Арча, Сон-Куль, Каракол, Джети-Огуз, Сары-Челек, Таш-Рабат и Арсланбоб. Маршруты, культура, кухня и полезные советы путешественникам.">
+  <meta name="keywords" content="Кыргызстан, туризм, Иссык-Куль, Сон-Куль, Ала-Арча, Каракол, юрта, Тянь-Шань, путешествия">
+  <meta name="author" content="Kyrgyzstan Tourism">
+  <meta name="theme-color" content="#14532D">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Kyrgyzstan Tourism">
+  <meta property="og:title" content="Discover the Beauty of Kyrgyzstan">
+  <meta property="og:description" content="Где величественные горы встречаются с кристально чистыми озёрами и древними кочевыми традициями.">
+  <meta property="og:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Song-Kul_2015_02.jpg?width=1200">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Discover the Beauty of Kyrgyzstan">
+  <meta name="twitter:description" content="Горы Тянь-Шаня, Иссык-Куль, юрты и кочевая культура — путеводитель по Кыргызстану.">
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-    sdakasajlkklads
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="logo" href="#home" aria-label="KYRGYZSTAN — на главную">
+        <span class="logo__mark" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+        <span class="logo__text">KYRGYZSTAN</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Главная</a></li>
+          <li><a class="nav__link" href="#destinations">Направления</a></li>
+          <li><a class="nav__link" href="#adventure">Достопримечательности</a></li>
+          <li><a class="nav__link" href="#culture">Культура</a></li>
+          <li><a class="nav__link" href="#about">О нас</a></li>
+          <li><a class="nav__link" href="#contact">Контакты</a></li>
+        </ul>
+        <a class="btn btn--gold nav__cta" href="#destinations">Explore Kyrgyzstan</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero__bg" id="heroBg" role="img" aria-label="Горы Тянь-Шаня в национальном парке Ала-Арча"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <p class="hero__eyebrow hero-anim" style="--d:0.1s">Центральная Азия · Тянь-Шань</p>
+        <h1 class="hero__title hero-anim" id="heroTitle" style="--d:0.25s">Discover the Beauty <span>of Kyrgyzstan</span></h1>
+        <p class="hero__subtitle hero-anim" style="--d:0.45s">Where majestic mountains meet crystal-clear lakes and ancient nomadic traditions.</p>
+        <div class="hero__actions hero-anim" style="--d:0.6s">
+          <a class="btn btn--gold btn--lg" href="#destinations">Explore Destinations <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--glass btn--lg" href="#culture">Discover Our Culture</a>
+        </div>
+      </div>
+
+      <ul class="hero__stats container hero-anim" style="--d:0.8s" aria-label="Кыргызстан в цифрах">
+        <li class="stat"><strong>94%</strong><span>территории — горы</span></li>
+        <li class="stat"><strong>7439 м</strong><span>пик Жеңиш-Чокусу</span></li>
+        <li class="stat"><strong>≈2000</strong><span>горных озёр</span></li>
+        <li class="stat"><strong>199 951 км²</strong><span>площадь страны</span></li>
+      </ul>
+
+      <a class="hero__scroll" href="#about" aria-label="Прокрутить к разделу о Кыргызстане">
+        <span class="hero__mouse" aria-hidden="true"></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="aboutTitle">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <figure class="about__img about__img--main media" data-label="Иссык-Куль">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Issykkul_plyag.jpg?width=900"
+                 data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk-Kul,_Kyrgyzstan_(29685360547).jpg?width=900"
+                 alt="Песчаный пляж и синяя гладь озера Иссык-Куль на фоне гор" width="900" height="600" loading="lazy" decoding="async">
+          </figure>
+          <figure class="about__img about__img--small media" data-label="Юрта на Сон-Куле">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzsk%C3%A1_jurta,_Song-k%C3%B6l.jpg?width=600"
+                 data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk_Kul_Jurtencamp.jpg?width=600"
+                 alt="Традиционная кыргызская юрта на берегу высокогорного озера Сон-Куль" width="600" height="450" loading="lazy" decoding="async">
+          </figure>
+          <div class="about__badge" aria-hidden="true">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <span>Сердце<br>Тянь-Шаня</span>
+          </div>
+        </div>
+
+        <div class="about__text reveal">
+          <p class="eyebrow">О Кыргызстане</p>
+          <h2 class="section__title" id="aboutTitle">Страна небесных гор и кочевых традиций</h2>
+          <p class="lead">Кыргызстан — небольшая горная страна в самом центре Азии, на перекрёстке древнего Великого шёлкового пути. Здесь снежные пики Тянь-Шаня отражаются в бирюзовых озёрах, а летние пастбища до сих пор живут по ритму кочевников.</p>
+
+          <ul class="about__features">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><h3>Центральная Азия</h3><p>Граничит с Казахстаном, Узбекистаном, Таджикистаном и Китаем. Столица — Бишкек.</p></div></li>
+            <li><i class="fa-solid fa-mountain" aria-hidden="true"></i><div><h3>Горы Тянь-Шаня</h3><p>Больше 90% территории — горы, а средняя высота страны превышает 2700 метров.</p></div></li>
+            <li><i class="fa-solid fa-horse" aria-hidden="true"></i><div><h3>Кочевая культура</h3><p>Юрты, конные игры, эпос «Манас» и ремёсла, признанные ЮНЕСКО.</p></div></li>
+            <li><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i><div><h3>Гостеприимство</h3><p>Гостя здесь встречают чаем, боорсоками и местом у дастархана.</p></div></li>
+          </ul>
+
+          <div class="facts">
+            <div class="fact"><span class="fact__num">668 м</span><span class="fact__text">глубина Иссык-Куля — одного из крупнейших высокогорных озёр мира</span></div>
+            <div class="fact"><span class="fact__num">ЮНЕСКО</span><span class="fact__text">признало эпос «Манас», искусство акынов, юрту, шырдак, кок-бору и калпак</span></div>
+            <div class="fact"><span class="fact__num">11 000 га</span><span class="fact__text">занимает ореховый лес Арсланбоба — крупнейший на планете</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESTINATIONS ============ -->
+    <section class="section destinations" id="destinations" aria-labelledby="destTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Popular Destinations</p>
+          <h2 class="section__title" id="destTitle">Куда поехать в Кыргызстане</h2>
+          <p class="section__subtitle">Восемь мест, с которых стоит начать знакомство со страной: от тёплого Иссык-Куля до каменного караван-сарая на высоте 3200 метров.</p>
+        </header>
+
+        <div class="dest-grid">
+          <article class="dest-card reveal" data-id="issyk-kul">
+            <div class="dest-card__media media" data-label="Иссык-Куль">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk-Kul,_Kyrgyzstan_(29685360547).jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Issykkul_plyag.jpg?width=800"
+                   alt="Южный берег озера Иссык-Куль и заснеженные хребты" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Иссык-Кульская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Иссык-Куль</h3>
+              <p class="dest-card__text">Жемчужина Кыргызстана — огромное незамерзающее озеро в кольце гор.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="issyk-kul">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="ala-archa">
+            <div class="dest-card__media media" data-label="Ала-Арча">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_03.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_01.jpg?width=800"
+                   alt="Горное ущелье в национальном парке Ала-Арча" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Чуйская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Ала-Арча</h3>
+              <p class="dest-card__text">Национальный парк с ледниками и арчовыми лесами в 40 км от Бишкека.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="ala-archa">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="son-kul">
+            <div class="dest-card__media media" data-label="Сон-Куль">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Song-Kul_2015_02.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/SongKolHorses.jpg?width=800"
+                   alt="Высокогорное озеро Сон-Куль среди альпийских пастбищ" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Нарынская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Сон-Куль</h3>
+              <p class="dest-card__text">Высокогорное озеро на 3016 м, где летом стоят юрты пастухов.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="son-kul">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="karakol">
+            <div class="dest-card__media media" data-label="Каракол">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karakol_cathedral.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_Musicians_in_Karakol.jpg?width=800"
+                   alt="Деревянный Свято-Троицкий собор в Караколе" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Иссык-Кульская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Каракол</h3>
+              <p class="dest-card__text">Горный город трекеров и лыжников у подножия хребта Терскей Ала-Тоо.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="karakol">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="jeti-oguz">
+            <div class="dest-card__media media" data-label="Джети-Огуз">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jeti-%C3%96g%C3%BCz.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_(6052094329).jpg?width=800"
+                   alt="Красные скалы Джети-Огуз «Семь быков»" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Иссык-Кульская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Джети-Огуз</h3>
+              <p class="dest-card__text">Красные скалы «Семь быков» и ущелье с еловыми лесами.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="jeti-oguz">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="sary-chelek">
+            <div class="dest-card__media media" data-label="Сары-Челек">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sary_Chelek_Lake.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_05.jpg?width=800"
+                   alt="Изумрудное озеро Сары-Челек среди лесистых склонов" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Джалал-Абадская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Сары-Челек</h3>
+              <p class="dest-card__text">Изумрудное озеро в биосферном заповеднике на западе Тянь-Шаня.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="sary-chelek">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="tash-rabat">
+            <div class="dest-card__media media" data-label="Таш-Рабат">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tash_Rabat.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Burana.JPG?width=800"
+                   alt="Каменный караван-сарай Таш-Рабат в горной долине" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Нарынская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Таш-Рабат</h3>
+              <p class="dest-card__text">Каменный караван-сарай XV века на Великом шёлковом пути.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="tash-rabat">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" data-id="arslanbob">
+            <div class="dest-card__media media" data-label="Арсланбоб">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Arslanbob.jpg?width=800"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Sary_Chelek_Lake.jpg?width=800"
+                   alt="Ореховые леса и горы вокруг села Арсланбоб" width="800" height="560" loading="lazy" decoding="async">
+              <span class="dest-card__region"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Джалал-Абадская обл.</span>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__title">Арсланбоб</h3>
+              <p class="dest-card__text">Крупнейший в мире реликтовый лес грецкого ореха и водопады.</p>
+              <button class="btn btn--outline dest-card__btn" type="button" data-open="arslanbob">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NATURE & ADVENTURE ============ -->
+    <section class="section adventure" id="adventure" aria-labelledby="advTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Nature &amp; Adventure</p>
+          <h2 class="section__title" id="advTitle">Приключения под открытым небом</h2>
+          <p class="section__subtitle">Горы, степи и озёра Кыргызстана созданы для активного отдыха — в любое время года.</p>
+        </header>
+
+        <div class="adv-grid">
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Mountain Hiking">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_01.jpg?width=600" alt="Горная река в ущелье Ала-Арча" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i><h3>Mountain Hiking</h3><p>Однодневные маршруты к ледникам и водопадам в Ала-Арче и под Караколом.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Horse Riding">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/SongKolHorses.jpg?width=600" alt="Лошади пасутся у озера Сон-Куль" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-horse" aria-hidden="true"></i><h3>Horse Riding</h3><p>Конные переходы от юрты к юрте — самый «кыргызский» способ увидеть горы.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Camping">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk_Kul_Jurtencamp.jpg?width=600" alt="Лагерь у берега Иссык-Куля" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-campground" aria-hidden="true"></i><h3>Camping</h3><p>Ночёвки у озёр и в долинах под звёздным небом без светового загрязнения.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Trekking">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_05.jpg?width=600" alt="Каменистое поле на треке в Ала-Арче" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-route" aria-hidden="true"></i><h3>Trekking</h3><p>Многодневные треки через перевалы, например к озеру Ала-Куль на 3500 м.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Skiing">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karakol_Ski_Base.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_03.jpg?width=600"
+                   alt="Заснеженные склоны Тянь-Шаня" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-person-skiing" aria-hidden="true"></i><h3>Skiing</h3><p>Каракол — один из лучших горнолыжных курортов Центральной Азии, с трассами среди елей.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Yurt Experience">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B5rg%C3%B5zstan_jurta_04_I.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzsk%C3%A1_jurta,_Song-k%C3%B6l.jpg?width=600"
+                   alt="Кыргызская юрта" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-tent" aria-hidden="true"></i><h3>Yurt Experience</h3><p>Ночь в юрте, кымыз, свежие боорсоки и рассказы пастухов у очага.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Photography">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_(6052094329).jpg?width=600" alt="Панорама горной долины Кыргызстана" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-camera" aria-hidden="true"></i><h3>Photography</h3><p>Рассветы над озёрами, табуны лошадей и Млечный Путь над юртами.</p></div>
+          </article>
+          <article class="adv-card reveal">
+            <div class="adv-card__media media" data-label="Lake Adventures">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/20141010_Kyrgyzstan_1169_Lake_Issyk-Kul_(15635724474).jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Issykkul_plyag.jpg?width=600"
+                   alt="Озеро Иссык-Куль осенью" width="600" height="420" loading="lazy" decoding="async">
+            </div>
+            <div class="adv-card__body"><i class="fa-solid fa-water" aria-hidden="true"></i><h3>Lake Adventures</h3><p>Купание, сапы, яхты и пляжи Иссык-Куля, рыбалка на горных озёрах.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CULTURE ============ -->
+    <section class="section culture" id="culture" aria-labelledby="cultureTitle">
+      <div class="culture__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__head section__head--light reveal">
+          <p class="eyebrow eyebrow--gold">Kyrgyz Culture</p>
+          <h2 class="section__title" id="cultureTitle">Наследие великой степи</h2>
+          <p class="section__subtitle">Культура, рождённая в седле и под куполом юрты: ремёсла, музыка, игры и обычаи, которые живы и сегодня.</p>
+        </header>
+
+        <div class="culture-grid">
+          <article class="culture-card culture-card--wide reveal">
+            <div class="culture-card__media media" data-label="Кыргызская юрта">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_flag_yurt_Tengri_symbol.jpg?width=900"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzsk%C3%A1_jurta,_Song-k%C3%B6l.jpg?width=900"
+                   alt="Купол юрты — тюндюк, изображённый на флаге Кыргызстана" width="900" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body">
+              <span class="tag">Символ страны</span>
+              <h3>Кыргызская юрта</h3>
+              <p>Бозуй собирают за час без единого гвоздя. Её купол — тюндюк — изображён на государственном флаге, а традиции изготовления юрты внесены в список ЮНЕСКО.</p>
+            </div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Национальная одежда">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_men%27s_and_women%27s_national_clothing_(2025-03-26).jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kirghiz_wedding.jpg?width=600"
+                   alt="Мужская и женская кыргызская национальная одежда" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Национальная одежда</h3><p>Белый войлочный калпак, расшитые чапаны и элепечек — женский головной убор.</p></div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Традиционная музыка">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_Musicians_in_Karakol.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_Manaschi,_Karakol.jpg?width=600"
+                   alt="Кыргызские музыканты в национальных костюмах" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Традиционная музыка</h3><p>Акыны-импровизаторы и манасчи, исполняющие эпос «Манас» — один из самых длинных в мире.</p></div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Комуз">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Komuz.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Instruments_and_coins_of_the_Kyrgyz_of_the_19th_century_(2025-03-26).jpg?width=600"
+                   alt="Комуз — трёхструнный кыргызский музыкальный инструмент" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Комуз</h3><p>Трёхструнный безладовый инструмент из абрикоса или арчи — главный музыкальный символ кыргызов.</p></div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Орлиная охота">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Berkutchi.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/KyrgyzEagleHuntsman.jpg"
+                   alt="Беркутчи — охотник с беркутом" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Орлиная охота</h3><p>Беркутчи годами воспитывают беркутов. Показательные выступления можно увидеть у Боконбаева.</p></div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Национальные игры">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kokpar_-_Goat_polo_in_Kyrgyzstan.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Horseback_wrestling_in_Kyrgyzstan.jpg?width=600"
+                   alt="Кок-бору — конная командная игра" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Национальные игры</h3><p>Кок-бору, эр-эниш (борьба на конях) и кыз-куумай. Здесь проходили Всемирные игры кочевников.</p></div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Кочевой образ жизни">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk_Kul_Jurtencamp.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/SongKolHorses.jpg?width=600"
+                   alt="Юрточный лагерь на летнем пастбище" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Кочевой образ жизни</h3><p>Каждое лето семьи перегоняют скот на жайлоо — высокогорные пастбища — и живут в юртах.</p></div>
+          </article>
+
+          <article class="culture-card reveal">
+            <div class="culture-card__media media" data-label="Кыргызская кухня">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_women_and_child_offering_bread_and_salt.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kurut_fromages_kirghize.jpg?width=600"
+                   alt="Кыргызские женщины встречают гостей хлебом" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="culture-card__body"><h3>Кыргызская кухня</h3><p>Мясо, тесто, молочные продукты и щедрый дастархан — кухня кочевников, созданная для гостей.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOD ============ -->
+    <section class="section food" id="food" aria-labelledby="foodTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">National Food</p>
+          <h2 class="section__title" id="foodTitle">Вкус Кыргызстана</h2>
+          <p class="section__subtitle">Шесть блюд и напитков, которые стоит попробовать в первую же поездку.</p>
+        </header>
+
+        <div class="food-grid">
+          <article class="food-card reveal">
+            <div class="food-card__media media" data-label="Бешбармак">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beshbarmak1.jpg?width=600" alt="Бешбармак — отварное мясо с тонко нарезанной лапшой" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="food-card__body"><h3>Бешбармак</h3><p>«Пять пальцев»: отварная баранина или конина с тонкой лапшой и луком в бульоне. Главное праздничное блюдо.</p></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-card__media media" data-label="Лагман">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Uyghur_Lagman.jpg?width=600" alt="Лагман — тянутая лапша с мясом и овощами" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="food-card__body"><h3>Лагман</h3><p>Тянутая вручную лапша с говядиной, перцем и овощами — уйгуро-дунганское блюдо, любимое по всей стране.</p></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-card__media media" data-label="Манты">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D0%BD%D1%82%D1%8B.jpg?width=600"
+                   alt="Манты — крупные паровые пельмени" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="food-card__body"><h3>Манты</h3><p>Крупные паровые «пельмени» с рубленой бараниной, луком и курдючным жиром. Иногда — с тыквой.</p></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-card__media media" data-label="Боорсок">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Boortsog.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz_women_and_child_offering_bread_and_salt.jpg?width=600"
+                   alt="Боорсоки — жареные кусочки теста" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="food-card__body"><h3>Боорсок</h3><p>Пышные кусочки теста, обжаренные в масле. Ими усыпают дастархан к чаю на любом празднике.</p></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-card__media media" data-label="Куурдак">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kuurdak.jpg?width=600"
+                   data-fallback="https://commons.wikimedia.org/wiki/Special:FilePath/Kurut_fromages_kirghize.jpg?width=600"
+                   alt="Куурдак — жареное мясо с луком" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="food-card__body"><h3>Куурдак</h3><p>Обжаренное мясо с луком и картофелем в казане — сытное блюдо пастухов, которое готовят на огне.</p></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-card__media media" data-label="Кымыз">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kumys-bottle.jpg?width=600" alt="Кымыз — кисломолочный напиток из кобыльего молока" width="600" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="food-card__body"><h3>Кымыз</h3><p>Слегка игристый напиток из кобыльего молока. Лучший — летом на жайлоо, прямо из юрты.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRAVEL GUIDE ============ -->
+    <section class="section guide" id="guide" aria-labelledby="guideTitle">
+      <div class="container guide__grid">
+        <header class="guide__intro reveal">
+          <p class="eyebrow">Travel Guide</p>
+          <h2 class="section__title" id="guideTitle">Полезно знать перед поездкой</h2>
+          <p class="section__subtitle">Короткие ответы на главные вопросы путешественников. Правила въезда и транспорта меняются — проверяйте актуальные данные перед поездкой.</p>
+          <div class="guide__note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p>Национальная валюта — <strong>сом (KGS)</strong>. Языки — кыргызский и русский. Часовой пояс — UTC+6.</p>
+          </div>
+        </header>
+
+        <div class="accordion reveal" id="guideAccordion">
+          <div class="accordion__item">
+            <h3><button class="accordion__btn" type="button" aria-expanded="true" aria-controls="acc1" id="accBtn1"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Когда лучше приезжать?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="acc1" role="region" aria-labelledby="accBtn1">
+              <ul>
+                <li><strong>Июнь – сентябрь</strong> — лучшее время для треккинга, юрт и высокогорных озёр.</li>
+                <li><strong>Июль – август</strong> — пляжный сезон на Иссык-Куле.</li>
+                <li><strong>Декабрь – март</strong> — горнолыжный сезон в Караколе.</li>
+                <li><strong>Сентябрь – октябрь</strong> — золотая осень и сбор орехов в Арсланбобе.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3><button class="accordion__btn" type="button" aria-expanded="false" aria-controls="acc2" id="accBtn2"><i class="fa-solid fa-plane-arrival" aria-hidden="true"></i> Как добраться до Кыргызстана?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="acc2" role="region" aria-labelledby="accBtn2" hidden>
+              <ul>
+                <li>Главный аэропорт — <strong>«Манас» (FRU)</strong> в Бишкеке; на юге — аэропорт <strong>Ош (OSS)</strong>.</li>
+                <li>Прямые рейсы связывают страну с Москвой, Стамбулом, Дубаем, Алматы и другими городами.</li>
+                <li>Из Алматы до Бишкека — около 4 часов на машине или автобусе.</li>
+                <li>Граждане многих стран могут въехать без визы — уточняйте правила для своего паспорта.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3><button class="accordion__btn" type="button" aria-expanded="false" aria-controls="acc3" id="accBtn3"><i class="fa-solid fa-van-shuttle" aria-hidden="true"></i> Как передвигаться по стране?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="acc3" role="region" aria-labelledby="accBtn3" hidden>
+              <ul>
+                <li><strong>Маршрутки</strong> — самый дешёвый транспорт между городами.</li>
+                <li><strong>Такси и приложения</strong> работают в Бишкеке, Оше и Караколе.</li>
+                <li>Для Сон-Куля, Таш-Рабата и горных дорог лучше <strong>внедорожник с водителем</strong>.</li>
+                <li>Внутренние рейсы связывают Бишкек и Ош.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3><button class="accordion__btn" type="button" aria-expanded="false" aria-controls="acc4" id="accBtn4"><i class="fa-solid fa-bed" aria-hidden="true"></i> Где остановиться?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="acc4" role="region" aria-labelledby="accBtn4" hidden>
+              <ul>
+                <li><strong>Отели и хостелы</strong> — в Бишкеке, Оше, Караколе и на Иссык-Куле.</li>
+                <li><strong>Гестхаусы и homestay</strong> — в сёлах, часто с домашней едой.</li>
+                <li><strong>Юрточные лагеря</strong> — на Сон-Куле, у Таш-Рабата и в Джети-Огузе с июня по сентябрь.</li>
+                <li>В горах — палатки и альпинистские приюты.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3><button class="accordion__btn" type="button" aria-expanded="false" aria-controls="acc5" id="accBtn5"><i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i> Что взять с собой?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="acc5" role="region" aria-labelledby="accBtn5" hidden>
+              <ul>
+                <li>Тёплые слои одежды: ночью на 3000 м холодно даже в июле.</li>
+                <li>Треккинговая обувь, дождевик, головной убор и солнцезащитные очки.</li>
+                <li>Крем с высоким SPF — в горах солнце очень активное.</li>
+                <li>Наличные сомы: в сёлах и юртах карты принимают редко.</li>
+                <li>Аптечку, павербанк и офлайн-карты.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3><button class="accordion__btn" type="button" aria-expanded="false" aria-controls="acc6" id="accBtn6"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Какие правила безопасности соблюдать?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="acc6" role="region" aria-labelledby="accBtn6" hidden>
+              <ul>
+                <li>Поднимайтесь на высоту постепенно, чтобы избежать горной болезни.</li>
+                <li>Сообщайте близким или гиду свой маршрут; в горах часто нет связи.</li>
+                <li>Для приграничных зон может понадобиться пограничное разрешение.</li>
+                <li>Пейте бутилированную или кипячёную воду.</li>
+                <li>Уважайте местные обычаи и спрашивайте разрешения перед фотографированием людей.</li>
+                <li>Номер экстренных служб — <strong>112</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery" aria-labelledby="galleryTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="section__title" id="galleryTitle">Кыргызстан в кадре</h2>
+          <p class="section__subtitle">Нажмите на фотографию, чтобы открыть её в полном размере. Листайте стрелками или свайпом.</p>
+        </header>
+
+        <div class="gallery__filters reveal" role="group" aria-label="Фильтр галереи">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="chip" type="button" data-filter="mountains" aria-pressed="false">Горы</button>
+          <button class="chip" type="button" data-filter="lakes" aria-pressed="false">Озёра</button>
+          <button class="chip" type="button" data-filter="nature" aria-pressed="false">Леса и реки</button>
+          <button class="chip" type="button" data-filter="yurts" aria-pressed="false">Юрты</button>
+          <button class="chip" type="button" data-filter="festivals" aria-pressed="false">Праздники</button>
+          <button class="chip" type="button" data-filter="animals" aria-pressed="false">Животные</button>
+          <button class="chip" type="button" data-filter="architecture" aria-pressed="false">Архитектура</button>
+        </div>
+
+        <div class="gallery__grid" id="galleryGrid">
+          <figure class="g-item g-item--tall media" data-cat="mountains" data-label="Ала-Арча">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Ущелье Ала-Арча">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_03.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_03.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Kyrgyzstan_Ala_Archa_National_Park_03.jpg" alt="Ущелье Ала-Арча" width="700" height="900" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Ущелье Ала-Арча</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="lakes" data-label="Иссык-Куль">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Берег Иссык-Куля">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Issykkul_plyag.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Issykkul_plyag.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Issykkul_plyag.jpg" alt="Берег Иссык-Куля" width="700" height="470" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Берег Иссык-Куля</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="lakes" data-label="Сон-Куль">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Озеро Сон-Куль">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Song-Kul_2015_02.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Song-Kul_2015_02.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Song-Kul_2015_02.jpg" alt="Озеро Сон-Куль" width="700" height="470" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Озеро Сон-Куль</figcaption>
+          </figure>
+          <figure class="g-item g-item--wide media" data-cat="mountains" data-label="Горная долина">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Горная долина Тянь-Шаня">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_(6052094329).jpg?width=1000" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_(6052094329).jpg?width=1700" data-source="https://commons.wikimedia.org/wiki/File:Kyrgyzstan_(6052094329).jpg" alt="Горная долина Тянь-Шаня" width="1000" height="516" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Горная долина Тянь-Шаня</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="nature" data-label="Сары-Челек">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Леса вокруг Сары-Челека">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sary_Chelek_Lake.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Sary_Chelek_Lake.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Sary_Chelek_Lake.jpg" alt="Леса вокруг озера Сары-Челек" width="700" height="470" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Леса вокруг Сары-Челека</figcaption>
+          </figure>
+          <figure class="g-item g-item--tall media" data-cat="nature" data-label="Горная река">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Река Ала-Арча">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_01.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzstan_Ala_Archa_National_Park_01.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Kyrgyzstan_Ala_Archa_National_Park_01.jpg" alt="Бурная горная река Ала-Арча" width="700" height="900" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Река Ала-Арча и горные водопады</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="yurts" data-label="Юрта">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Юрта на Сон-Куле">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzsk%C3%A1_jurta,_Song-k%C3%B6l.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyzsk%C3%A1_jurta,_Song-k%C3%B6l.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Kyrgyzsk%C3%A1_jurta,_Song-k%C3%B6l.jpg" alt="Юрта на берегу Сон-Куля" width="700" height="525" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Юрта на Сон-Куле</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="yurts" data-label="Юрточный лагерь">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Юрточный лагерь у Иссык-Куля">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk_Kul_Jurtencamp.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Issyk_Kul_Jurtencamp.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Issyk_Kul_Jurtencamp.jpg" alt="Юрточный лагерь у Иссык-Куля" width="700" height="467" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Юрточный лагерь у Иссык-Куля</figcaption>
+          </figure>
+          <figure class="g-item g-item--tall media" data-cat="festivals" data-label="Кок-бору">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Кок-бору">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kokpar_-_Goat_polo_in_Kyrgyzstan.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Kokpar_-_Goat_polo_in_Kyrgyzstan.jpg?width=1400" data-source="https://commons.wikimedia.org/wiki/File:Kokpar_-_Goat_polo_in_Kyrgyzstan.jpg" alt="Всадники играют в кок-бору" width="700" height="1000" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Кок-бору — конная игра</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="festivals" data-label="Кыргызская свадьба">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Кыргызская свадьба">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kirghiz_wedding.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Kirghiz_wedding.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Kirghiz_wedding.jpg" alt="Традиционная кыргызская свадьба" width="700" height="525" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Традиционная свадьба</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="animals" data-label="Лошади">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Лошади у Сон-Куля">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/SongKolHorses.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/SongKolHorses.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:SongKolHorses.jpg" alt="Лошади пасутся у Сон-Куля" width="700" height="470" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Табун у Сон-Куля</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="animals" data-label="Беркутчи">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Охотник с беркутом">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/KyrgyzEagleHuntsman.jpg" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/KyrgyzEagleHuntsman.jpg" data-source="https://commons.wikimedia.org/wiki/File:KyrgyzEagleHuntsman.jpg" alt="Кыргызский охотник с беркутом" width="360" height="545" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Охотник с беркутом</figcaption>
+          </figure>
+          <figure class="g-item g-item--tall media" data-cat="architecture" data-label="Башня Бурана">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Башня Бурана">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Burana.JPG?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Burana.JPG?width=1400" data-source="https://commons.wikimedia.org/wiki/File:Burana.JPG" alt="Башня Бурана — минарет XI века" width="700" height="933" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Башня Бурана, XI век</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="architecture" data-label="Каракол">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Свято-Троицкий собор в Караколе">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karakol_cathedral.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Karakol_cathedral.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Karakol_cathedral.jpg" alt="Деревянный собор в Караколе" width="700" height="525" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Деревянный собор в Караколе</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="mountains" data-label="Джети-Огуз">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Скалы Джети-Огуз">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jeti-%C3%96g%C3%BCz.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Jeti-%C3%96g%C3%BCz.jpg?width=1600" data-source="https://commons.wikimedia.org/wiki/File:Jeti-%C3%96g%C3%BCz.jpg" alt="Красные скалы Джети-Огуз" width="700" height="470" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Скалы Джети-Огуз</figcaption>
+          </figure>
+          <figure class="g-item media" data-cat="festivals" data-label="Эр-эниш">
+            <button type="button" class="g-item__btn" aria-label="Открыть фото: Борьба на конях">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Horseback_wrestling_in_Kyrgyzstan.jpg?width=700" data-full="https://commons.wikimedia.org/wiki/Special:FilePath/Horseback_wrestling_in_Kyrgyzstan.jpg?width=1400" data-source="https://commons.wikimedia.org/wiki/File:Horseback_wrestling_in_Kyrgyzstan.jpg" alt="Эр-эниш — борьба на конях" width="700" height="1100" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Эр-эниш — борьба на конях</figcaption>
+          </figure>
+        </div>
+        <p class="gallery__credit">Фото: Wikimedia Commons, свободные лицензии CC BY / CC BY-SA / Public Domain. Автор и лицензия каждого снимка — по ссылке «Источник» в просмотрщике.</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <p class="eyebrow eyebrow--gold">Contact</p>
+          <h2 class="section__title" id="contactTitle">Спланируем ваше путешествие</h2>
+          <p class="contact__lead">Расскажите, куда хотите поехать и сколько у вас дней — мы подскажем маршрут, сезон и формат поездки.</p>
+          <ul class="contact__list">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><span>Адрес</span><strong>Бишкек, Кыргызстан</strong></div></li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><div><span>Email (демо)</span><strong>hello@kyrgyzstan-tourism.example</strong></div></li>
+            <li><i class="fa-solid fa-clock" aria-hidden="true"></i><div><span>Часовой пояс</span><strong>UTC+6, Бишкек</strong></div></li>
+          </ul>
+          <p class="demo-badge"><i class="fa-solid fa-flask" aria-hidden="true"></i> Сайт работает в демонстрационном режиме: сервер для приёма сообщений не подключён.</p>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate aria-describedby="formNote">
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Ваше имя" required minlength="2" maxlength="60" aria-describedby="nameError">
+              <p class="form__error" id="nameError" aria-live="polite"></p>
+            </div>
+            <div class="form__field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="100" aria-describedby="emailError">
+              <p class="form__error" id="emailError" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="subject">Тема обращения</label>
+            <select id="subject" name="subject" required aria-describedby="subjectError">
+              <option value="">Выберите тему</option>
+              <option value="route">Подбор маршрута</option>
+              <option value="trek">Треккинг и походы</option>
+              <option value="culture">Культурный тур</option>
+              <option value="ski">Горные лыжи</option>
+              <option value="other">Другое</option>
+            </select>
+            <p class="form__error" id="subjectError" aria-live="polite"></p>
+          </div>
+          <div class="form__field">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" placeholder="Например: 10 дней в июле, хотим Сон-Куль и Иссык-Куль" required minlength="10" maxlength="1000" aria-describedby="messageError messageCount"></textarea>
+            <div class="form__meta">
+              <p class="form__error" id="messageError" aria-live="polite"></p>
+              <span class="form__count" id="messageCount">0 / 1000</span>
+            </div>
+          </div>
+          <button class="btn btn--gold btn--lg form__submit" type="submit">Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          <p class="form__note" id="formNote">Демо-режим: данные проверяются в браузере и никуда не отправляются.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="#home" aria-label="KYRGYZSTAN — на главную">
+          <span class="logo__mark" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+          <span class="logo__text">KYRGYZSTAN</span>
+        </a>
+        <p>Туристический портал о горах, озёрах и кочевой культуре Кыргызстана. Вдохновляем на путешествия в сердце Центральной Азии.</p>
+        <ul class="socials" aria-label="Социальные сети">
+          <li><a href="#" data-demo="social" aria-label="Instagram (демо)"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#" data-demo="social" aria-label="Facebook (демо)"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="#" data-demo="social" aria-label="YouTube (демо)"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="#" data-demo="social" aria-label="Telegram (демо)"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer__col" aria-label="Быстрые ссылки">
+        <h3>Быстрые ссылки</h3>
+        <ul>
+          <li><a href="#about">О Кыргызстане</a></li>
+          <li><a href="#adventure">Активности</a></li>
+          <li><a href="#culture">Культура</a></li>
+          <li><a href="#food">Кухня</a></li>
+          <li><a href="#guide">Путеводитель</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Туристические направления">
+        <h3>Направления</h3>
+        <ul>
+          <li><button type="button" class="footer__link" data-open="issyk-kul">Иссык-Куль</button></li>
+          <li><button type="button" class="footer__link" data-open="ala-archa">Ала-Арча</button></li>
+          <li><button type="button" class="footer__link" data-open="son-kul">Сон-Куль</button></li>
+          <li><button type="button" class="footer__link" data-open="karakol">Каракол</button></li>
+          <li><button type="button" class="footer__link" data-open="tash-rabat">Таш-Рабат</button></li>
+          <li><button type="button" class="footer__link" data-open="arslanbob">Арсланбоб</button></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Контакты</h3>
+        <ul class="footer__contacts">
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Бишкек, Кыргызстан</li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@kyrgyzstan-tourism.example</li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> 112 — экстренные службы</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>© <span id="year">2026</span> Kyrgyzstan Tourism. Демонстрационный проект.</p>
+      <p>Фотографии — <a href="https://commons.wikimedia.org/wiki/Category:Kyrgyzstan" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY / CC BY-SA / PD).</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- Destination modal -->
+  <div class="modal" id="destModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" data-close aria-label="Закрыть"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <div class="modal__media media" id="modalMedia">
+        <img id="modalImg" src="" alt="" width="1200" height="700">
+        <span class="modal__region" id="modalRegion"></span>
+      </div>
+      <div class="modal__body">
+        <p class="eyebrow" id="modalTagline"></p>
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <p class="modal__text" id="modalText"></p>
+        <dl class="modal__facts" id="modalFacts"></dl>
+        <h3 class="modal__subtitle">Что посмотреть и чем заняться</h3>
+        <ul class="modal__list" id="modalList"></ul>
+        <div class="modal__actions">
+          <a class="btn btn--gold" href="#contact" data-close>Спланировать поездку</a>
+          <button class="btn btn--outline" type="button" data-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+    <button class="lightbox__close" type="button" data-lb-close aria-label="Закрыть просмотр"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" id="lbPrev" aria-label="Предыдущее фото"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption class="lightbox__caption">
+        <span id="lbCaption"></span>
+        <span class="lightbox__meta"><span id="lbCounter"></span> · <a id="lbSource" href="#" target="_blank" rel="noopener">Источник</a></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" id="lbNext" aria-label="Следующее фото"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <i class="fa-solid fa-circle-info toast__icon" aria-hidden="true"></i>
+    <div><strong class="toast__title" id="toastTitle"></strong><p class="toast__text" id="toastText"></p></div>
+    <button class="toast__close" type="button" id="toastClose" aria-label="Закрыть уведомление"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  </div>
+
+  <noscript><p class="noscript">Для модальных окон, галереи и формы включите JavaScript.</p></noscript>
 </body>
 </html>
